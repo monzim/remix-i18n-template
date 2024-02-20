@@ -1,0 +1,5 @@
+{
+  "greeting": "Hola",
+  "passMinLength": "La contraseña debe tener al menos 8 caracteres",
+  "passReq": "La contraseña debe tener al menos una letra mayúscula, una letra minúscula, un número y un carácter especial"
+}

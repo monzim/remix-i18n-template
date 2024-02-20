@@ -1,0 +1,5 @@
+{
+  "greeting": "Hello",
+  "passMinLength": "Password must be at least 8 characters",
+  "passMaxLength": "Password must be at most 60 characters"
+}
