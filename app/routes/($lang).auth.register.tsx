@@ -33,10 +33,10 @@ export async function action({ request }: ActionFunctionArgs) {
   return redirect("/dashboard");
 }
 
-export const handle = { i18n: i18nNS.common };
+export const handle = { i18n: i18nNS.home };
 export default function Signup() {
   const actionData = useActionData<typeof action>();
-  const { t, i18n } = useTranslation("home");
+  const { t, i18n } = useTranslation(i18nNS.home);
 
   return (
     <Form method="post">

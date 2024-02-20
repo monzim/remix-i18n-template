@@ -15,7 +15,11 @@ export const i18nNS = {
 export function getSuggestedLanguage(
   language?: string
 ): SupportedLanguages | undefined {
-  if (supportedLanguages.includes(language as SupportedLanguages)) {
+  if (
+    supportedLanguages.includes(
+      language?.trim().toLowerCase() as SupportedLanguages
+    )
+  ) {
     return language as SupportedLanguages;
   }
 

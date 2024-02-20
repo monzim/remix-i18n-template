@@ -18,6 +18,8 @@ import { getSuggestedLanguage, i18nNS } from "./i18n/i18n";
 export async function loader({ request, params }: LoaderFunctionArgs) {
   const { lang } = params;
 
+  console.log("🚀 ~ file: root.tsx ~ line 100 ~ loader ~ lang", lang);
+
   const locale =
     getSuggestedLanguage(lang) ?? (await i18next.getLocale(request));
   return json({ locale });
@@ -28,6 +30,7 @@ export const links: LinksFunction = () => [
 ];
 
 export const handle = { i18n: i18nNS.common };
+
 export default function App() {
   const { locale } = useLoaderData<typeof loader>();
   const { i18n } = useTranslation();
@@ -42,6 +45,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
+
       <body>
         <Outlet />
         <ScrollRestoration />
